@@ -1,0 +1,24 @@
+.main-carousel{
+    width: 70%;
+    margin: 120px auto 0;
+    height:630px;
+    
+    .carousel-cell{
+        margin:0 auto; 
+        width:100%;
+        background-size: cover;
+        height: 100%;
+    }
+    .firstCell{
+        background-image: url(/img/film4.jpg);
+        
+    }
+    .secondCell{
+        background-image: url(/img/film6.jpg);
+        
+    }
+    .thirdCell{
+        background-image: url(/img/film2.jpg);
+        
+    }
+}

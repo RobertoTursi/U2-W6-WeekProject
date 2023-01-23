@@ -33,6 +33,14 @@ body main div {
   justify-content: center;
   flex-direction: column;
 }
+body main div img {
+  border-radius: 5px;
+  width: 200px;
+  margin-bottom: 20px;
+}
+body main div input {
+  background-color: rgb(184, 46, 46);
+}
 body h1 {
   color: white;
 }/*# sourceMappingURL=indexapp.css.map */

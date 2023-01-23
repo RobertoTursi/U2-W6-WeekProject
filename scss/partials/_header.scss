@@ -116,9 +116,16 @@ header{
     padding: 64px 0 0 30px;
     h2{
         font-size: 5em;
-        color: #ff0000ad;
+        color: #ff0000;
+        @media screen and (max-width:768px){
+            margin-bottom: 50px;
+            font-size: 8em;
+        }
     }
     p{
+        @media screen and (max-width:768px){
+            display: none
+        }
         font-size: 1.5em;
         color:white;
     }

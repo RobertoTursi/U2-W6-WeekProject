@@ -1,3 +1,5 @@
+let spanName = document.getElementById("name")
+spanName.innerText = localStorage.getItem('name')
 /* Nav change color*/
 window.onscroll = () =>{
     if(window.scrollY > 0){
@@ -123,9 +125,16 @@ const startCarousel = (elem) => {
 
 
 /*Menu a tendina*/
-
+let count = 0
 const mobileMenu = () =>{
-    let menu = document.querySelector(".ulMenuNone")
-    menu.classList.add("ulMenu")
+    if(count === 0){
+        let menu = document.querySelector(".ulMenuNone")
+        menu.classList.add("ulMenu")
+        count = 1
+    } else {
+        let menu = document.querySelector(".ulMenuNone")
+        menu.classList.remove("ulMenu")
+        count = 0
+    }
     
 }
