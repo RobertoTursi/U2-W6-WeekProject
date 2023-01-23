@@ -25,7 +25,6 @@ body {
 header {
   background-image: url(../img/la-haine.webp);
   background-size: cover;
-  padding: 10px 30px;
   height: 45rem;
   width: 100%;
 }
@@ -36,31 +35,76 @@ header nav {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  padding: 10px 30px;
 }
 header nav div {
   display: flex;
-  width: 20%;
-  justify-content: space-between;
+  width: 30%;
+  justify-content: end;
   align-items: center;
 }
 header nav div button {
   width: 50px;
   height: 50px;
-  background-color: rgb(177, 41, 41);
+}
+header nav div button img {
+  width: 100%;
 }
 header nav ul {
   display: flex;
+  position: relative;
+}
+header nav ul .menu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header nav ul .menu {
+    display: inline;
+    margin-right: 55px;
+  }
+}
+header nav ul .ulMenuNone {
+  display: none;
+}
+header nav ul .ulMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  background-color: rgba(33, 37, 41, 0.6117647059);
+  padding: 20px;
+  left: -53px;
+}
+header nav ul .ulMenu li {
+  margin: 15px 15px;
+}
+header nav ul .ulMenu li a {
+  color: white;
+  border-bottom: 1px solid white;
+  font-size: 25px;
+  margin: 19px 0;
+  font-weight: bold;
+}
+header nav ul li img {
+  width: 45px;
+  margin-left: 15px;
 }
 header nav ul li i {
   font-size: 30px;
   margin: 0 1rem;
 }
 header div:first-of-type {
-  width: 40%;
+  width: 51%;
+  justify-content: start;
 }
 header div:first-of-type img {
   width: 100px;
   height: 50px;
+}
+@media screen and (max-width: 768px) {
+  header div:first-of-type li {
+    display: none;
+  }
 }
 header div:first-of-type li a {
   color: black;
@@ -73,7 +117,7 @@ header div:first-of-type li a {
   flex-direction: column;
   height: 37rem;
   justify-content: space-between;
-  padding: 4rem 0 0 0rem;
+  padding: 64px 0 0 30px;
 }
 .film h2 {
   font-size: 5em;

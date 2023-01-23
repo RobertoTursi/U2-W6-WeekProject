@@ -1,0 +1,19 @@
+@import './partials/reset';
+body{
+    main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+    background-color: black;
+    h1{
+        color:white;
+    }
+}

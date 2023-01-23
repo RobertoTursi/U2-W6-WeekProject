@@ -3,6 +3,21 @@ window.onscroll = () =>{
     if(window.scrollY > 0){
         let nav = document.querySelector("nav")
         nav.style.backgroundColor = "black"
+        nav.style.color = "white"
+        nav.style.transition = "0.5s"
+        let a = document.querySelectorAll("header a")
+        a.forEach(a => {
+            a.style.color = "white"
+        })
+    } else {
+        let nav = document.querySelector("nav")
+        nav.style.backgroundColor = "transparent"
+        nav.style.color = "black"
+        nav.style.transition = "0.5s"
+        let a = document.querySelectorAll("header a")
+        a.forEach(a => {
+            a.style.color = "black"
+        })
     }
 } 
 
@@ -104,4 +119,13 @@ const startCarousel = (elem) => {
             counter1 = 6
     }
 }
+}
+
+
+/*Menu a tendina*/
+
+const mobileMenu = () =>{
+    let menu = document.querySelector(".ulMenuNone")
+    menu.classList.add("ulMenu")
+    
 }
