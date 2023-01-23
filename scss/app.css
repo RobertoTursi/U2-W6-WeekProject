@@ -43,8 +43,14 @@ header nav ul .menu {
     margin-right: 55px;
   }
 }
-header nav ul .ulMenuNone {
+header nav ul .ulMenuNone, header nav ul .searchNone {
   display: none;
+}
+header nav ul .searchNone {
+  background-color: transparent;
+}
+header nav ul ::-webkit-input-placeholder {
+  color: black;
 }
 header nav ul .ulMenu {
   display: flex;
@@ -160,13 +166,12 @@ main .box2 {
 }
 
 .main-carousel {
-  width: 70%;
+  width: 100%;
   margin: 120px auto 0;
-  height: 630px;
+  height: 450px;
 }
 .main-carousel .carousel-cell {
-  margin: 0 auto;
-  width: 100%;
+  width: 50%;
   background-size: cover;
   height: 100%;
 }

@@ -41,9 +41,16 @@ header{
                         margin-right: 55px;
                     }
                 }
-                .ulMenuNone{
+                .ulMenuNone, .searchNone{
                     display: none;
                 }
+                    .searchNone{
+                        background-color: transparent;
+                    }
+                    ::-webkit-input-placeholder{
+                        color: black;
+                    }
+                
                 .ulMenu{
                     display: flex;
                     flex-direction: column;
@@ -64,6 +71,8 @@ header{
                         }
                 
                     }
+                
+
                         
                 }
                 li{

@@ -138,3 +138,9 @@ const mobileMenu = () =>{
     }
     
 }
+
+/*Film search*/
+const filmSearch = () => {
+    let input = document.querySelector(".searchNone")
+    input.style.display = "inline-block"
+}

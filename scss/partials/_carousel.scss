@@ -1,11 +1,10 @@
 .main-carousel{
-    width: 70%;
+    width: 100%;
     margin: 120px auto 0;
-    height:630px; 
+    height: 450px;
     
     .carousel-cell{
-        margin:0 auto; 
-        width:100%;
+        width: 50%;
         background-size: cover;
         height: 100%;
     }
