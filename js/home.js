@@ -11,6 +11,10 @@ window.onscroll = () =>{
         a.forEach(a => {
             a.style.color = "white"
         })
+        let input = document.querySelector(".searchNone")
+        input.style.backgroundColor = "white"
+        let icon = document.querySelector(".lettera")
+        icon.style.color = "black"
     } else {
         let nav = document.querySelector("nav")
         nav.style.backgroundColor = "transparent"
@@ -20,6 +24,10 @@ window.onscroll = () =>{
         a.forEach(a => {
             a.style.color = "black"
         })
+        let input = document.querySelector(".searchNone")
+        input.style.backgroundColor = "transparent"
+        let icon = document.querySelector(".lettera")
+        icon.style.color = "white"
     }
 } 
 
@@ -140,7 +148,122 @@ const mobileMenu = () =>{
 }
 
 /*Film search*/
-const filmSearch = () => {
-    let input = document.querySelector(".searchNone")
-    input.style.display = "inline-block"
+
+const arrayOfFilms = [
+    {
+        name: "Interstellar",
+        genere: ["Sci-fi", "Avventura"],
+        src: "/img/film1.jpg",
+        description: "L'umanità è sull'orlo dell'estinzione e un gruppo di astronauti viaggia attraverso un wormhole alla ricerca di un altro pianeta abitabile.",
+        
+    },
+    {
+        name: "No country for old men",
+        genere: ["Thriller", "Giallo"],
+        src: "/img/film2.jpg",
+        description: "Violence and mayhem ensue after a hunter stumbles upon some dead bodies, a stash of heroin and more than $2 million in cash near the Rio Grande.",
+        
+    },
+    {
+        name: "Django Unchained",
+        genere: ["Western", "Drammatico"],
+        src: "/img/film3.jpg",
+        description: "2 Oscar e 2 Golden Globe al western di Quentin Tarantino con Christoph Waltz, Jamie Foxx e Leonardo DiCaprio. Uno schiavo nero riacquista la liberta e corre a salvare anche sua moglie."
+    },
+    {
+        name: "Good Will Huntig",
+        genere: ["Romantico", "Drammatico"],
+        src: "/img/film4.jpg",
+        description: "Un professore scopre in un portiere un genio della matematica e l'affida a uno psicologo per affrontare i demoni che ostacolano il suo successo."
+    },
+    {
+        name: "Snatch - Lo strappo",
+        genere: ["Giallo", "Commedia"],
+        src: "/img/film5.jpg",
+        description: "Un trafficante trasporta una gemma rubata e scatena inavvertitamente tutta una serie di eventi che coinvolgono allibratori, boxe a mani nude e maiali."
+    },
+    {
+        name: "Sully",
+        genere: ["Drammatico"],
+        src: "/img/film6.jpg",
+        description: "Poco dopo il decollo, un Airbus 320 tenta un ammaraggio sul fiume Hudson. Sopravvivono tutti, ma il capitano è messo sotto esame e affronta una fama imprevista."
+    },
+    {
+        name: "Batman, il cavaliere oscuro",
+        genere: ["Thriller", "Dramma"],
+        src: "/img/film7.jpg",
+        description: "Batman, il tenente Gordon e il procuratore distrettuale Harvey Dent si scontrano con Joker: un folle genio del crimine dall'aspetto mostruoso che terrorizza Gotham City."
+    },
+    {
+        name: "Joker",
+        genere: ["Thriller", "Giallo"],
+        src: "/img/film8.jpg",
+        description: "Joker centers around the iconic arch-nemesis and is an original, standalone story not seen before on the big screen. The exploration of Arthur Fleck (Joaquin Phoenix), a man disregarded by society, is not only a gritty character study, but also a broader cautionary tale."
+    },
+    {
+        name: "Taxi driver",
+        genere: ["Drammatico", "Dramma"],
+        src: "/img/film9.jpg",
+        description: "Infuriato per la corruzione morale e il decadimento urbano di New York, un tassista squilibrato impazzisce, trama un omicidio e salva una giovane prostituta."
+    },
+    {
+        name: "American beauty",
+        genere: ["Romantico", "Drammatico"],
+        src: "/img/film10.jpg",
+        description: "5 Oscar a un film simbolo degli anni 90, con Kevin Spacey e Annette Bening, diretti da Sam Mendes. Un quarantenne insoddisfatto si invaghisce di una compagna di scuola di sua figlia."
+    },
+    {
+        name: "American Psycho",
+        genere: ["Thriller", "Horror"],
+        src: "/img/film11.jpg",
+        description: "Un broker, dalla bellezza statuaria che maschera la sua follia, sviluppa un orgoglio patologico per lo stile di vita yuppie e si abbandona a improvvisi impulsi omicidi."
+    },
+    {
+        name: "Il grande Lebowski",
+        genere: ["Commedia", "Giallo"],
+        src: "/img/film12.jpg",
+        description: "Commedia cult del Fratelli Coen con Jeff Bridges, John Goodman e Steve Buscemi. Drugo, un ex hippie omonimo di un ricco magnate, deve risolvere il caso di un misterioso rapimento."
+    },
+    
+]
+
+let count2 = 0
+const filmSearch = (e) => {
+    if(count === 0){
+        e.target.style.color = "white"
+        e.target.style.transition = "0.5s"
+
+        let input = document.querySelector(".searchNone")
+        input.style.display = "inline-block"
+        count = 1
+    } else {
+        e.target.style.color = "black"
+        let input = document.querySelector(".searchNone")
+        input.style.display = "none"
+        count = 0
+    }
+    
 }
+
+const enterFilm = () => {
+        let input = document.querySelector(".searchNone")
+        let window = document.querySelector(".film")
+        let header = document.querySelector("header")
+        let h2 = document.querySelector("h2")
+        let p = document.querySelector(".description")
+        
+        for (i=0; i<arrayOfFilms.length; i++){
+            if(arrayOfFilms[i].name.includes(input.value) || arrayOfFilms[i].name.includes(input.value[0].toUpperCase())){
+                h2.innerText = arrayOfFilms[i].name
+                p.innerText = arrayOfFilms[i].description
+                header.style.backgroundImage = `url(${arrayOfFilms[i].src})`
+
+            }
+                
+        
+    
+    }
+    
+    
+}
+

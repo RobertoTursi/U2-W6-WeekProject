@@ -35,9 +35,10 @@
                         <li><a href="#">Film</a></li>
                         
                     </ul>
-                    <li onclick="filmSearch()"><i class="bi bi-search"></i></li>
+                    <li onclick="filmSearch(event)"><i class="bi bi-search"></i></li>
                     <input class="searchNone" type="text" placeholder="inserisci il nome di un film">
-                    <li><i class="bi bi-bell"></i></li>
+                    <i onclick="enterFilm()"class="bi bi-send-fill lettera"></i>
+                    
                     <li><img src="./img/profilonetflix.jpg" alt=""></li>
                 </ul>
                 
@@ -47,7 +48,7 @@
 
         <div class="film">
             <h2>La <br/> Haine</h2>
-            <p>Una giornata in una delle tante banlieue parigine. Un giorno  ugaule a molti altri per Vinz, Said e Hubert,
+            <p class="description">Una giornata in una delle tante banlieue parigine. Un giorno  ugaule a molti altri per Vinz, Said e Hubert,
                se non fosse che un loro amico, Abdel, è stato pestato dalla polizia in seguito agli scontri della notte precedente
                e adesso è in ospedale...</p>
             <div  class="filmButtons">

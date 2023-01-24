@@ -44,12 +44,21 @@ header{
                 .ulMenuNone, .searchNone{
                     display: none;
                 }
-                    .searchNone{
-                        background-color: transparent;
-                    }
-                    ::-webkit-input-placeholder{
-                        color: black;
-                    }
+                .searchNone{
+                    background-color: transparent;
+                    width:230px;
+                }
+                ::-webkit-input-placeholder{
+                    color: black;
+                }
+                
+                .lettera{
+                    top: 1px;
+                    font-size: 30px;
+                    position: absolute;
+                    left: 253px;
+                }
+                     
                 
                 .ulMenu{
                     display: flex;
