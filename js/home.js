@@ -253,12 +253,20 @@ const enterFilm = () => {
         let p = document.querySelector(".description")
         
         for (i=0; i<arrayOfFilms.length; i++){
-            if(arrayOfFilms[i].name.includes(input.value) || arrayOfFilms[i].name.includes(input.value[0].toUpperCase())){
+            // if(arrayOfFilms[i].name.replace(' ', '').includes(input.value.replace(' ', '')) || arrayOfFilms[i].name.replace(' ', '').includes(input.value[0].toUpperCase().replace(' ', ''))){
+            //     console.log(arrayOfFilms[i].name.replace(' ', ''))
+            //     console.log(input.value.replace(' ', ''))
+            //     h2.innerText = arrayOfFilms[i].name
+            //     p.innerText = arrayOfFilms[i].description
+            //     header.style.backgroundImage = `url(${arrayOfFilms[i].src})`
+            //     break
+            if(arrayOfFilms[i].name.replace(' ', '') === input.value.replace(' ', '') ) {
+                console.log(input.value[0].toUpperCase().replace(' ', ''))
                 h2.innerText = arrayOfFilms[i].name
-                p.innerText = arrayOfFilms[i].description
-                header.style.backgroundImage = `url(${arrayOfFilms[i].src})`
-
+                 p.innerText = arrayOfFilms[i].description
+                 header.style.backgroundImage = `url(${arrayOfFilms[i].src})`
             }
+            
                 
         
     
@@ -266,4 +274,6 @@ const enterFilm = () => {
     
     
 }
+
+
 

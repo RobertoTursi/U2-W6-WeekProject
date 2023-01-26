@@ -41,12 +41,19 @@ header{
                         margin-right: 55px;
                     }
                 }
+                #search{
+                    @media screen and (max-width:768px){
+                        margin-right: 50px;
+                    }
+                    
+                }
                 .ulMenuNone, .searchNone{
                     display: none;
                 }
                 .searchNone{
                     background-color: transparent;
                     width:230px;
+                    
                 }
                 ::-webkit-input-placeholder{
                     color: black;
@@ -57,6 +64,9 @@ header{
                     font-size: 30px;
                     position: absolute;
                     left: 253px;
+                    @media screen and (max-width:768px){
+                        left: 420px
+                    }
                 }
                      
                 

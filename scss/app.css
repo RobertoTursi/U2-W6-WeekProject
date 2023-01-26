@@ -43,6 +43,11 @@ header nav ul .menu {
     margin-right: 55px;
   }
 }
+@media screen and (max-width: 768px) {
+  header nav ul #search {
+    margin-right: 50px;
+  }
+}
 header nav ul .ulMenuNone, header nav ul .searchNone {
   display: none;
 }
@@ -58,6 +63,11 @@ header nav ul .lettera {
   font-size: 30px;
   position: absolute;
   left: 253px;
+}
+@media screen and (max-width: 768px) {
+  header nav ul .lettera {
+    left: 420px;
+  }
 }
 header nav ul .ulMenu {
   display: flex;
@@ -190,6 +200,15 @@ main .box2 {
 }
 .main-carousel .thirdCell {
   background-image: url(/img/film2.jpg);
+}
+.main-carousel .fourthCell {
+  background-image: url(/img/film12.jpg);
+}
+.main-carousel .fifthCell {
+  background-image: url(/img/film9.jpg);
+}
+.main-carousel .sixthCell {
+  background-image: url(/img/film3.jpg);
 }
 
 html,
